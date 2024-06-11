@@ -1,0 +1,23 @@
+:root{
+    --black:rgb(35, 35, 35);
+    --yellow: rgb(253 224 71);
+}
+
+nav h3{
+    box-shadow: 3px 3px  0 0.5px var(--yellow);
+}
+
+@media only screen and (min-width: 768px){
+    .parent:hover .child {
+        opacity:1;
+        height:auto;
+        overflow:none;
+        transform: translateY(0);
+    }
+    .child {
+        opacity:0;
+        height:0;
+        overflow:hidden;
+        transform: translateY(-10%);
+    }
+}
