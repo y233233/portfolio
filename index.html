@@ -5,57 +5,48 @@
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
-<body class="bg-neutral-200 flex items-center justify-center flex-col w-full h-screen">
+<body class="bg-neutral-200 flex items-center justify-center flex-col w-full h-screen font-mono">
 
-    <nav class="flex px-4 border-b md:shadow-lg items-center w-full relatives top-0">
-        <h3 class="bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
-            <p class="pt-1">Y</p>
-        </h3>
-        <ul class="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0">
-            <li>
-                <a href="#" class="flex md:inline-flex p-4 items-center hover:bg-gray-50">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex md:inline-flex p-4 items-center hover:bg-gray-50">
-                    <span>Products</span>
-                </a>
-            </li>
-            <li class="relative parent">
-                <a href="#" class="flex justify-between md:inline-flex p-4 items-center hover:bg-gray-50 space-x-2">
-                    <span>Service</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current pt-1" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-                </a>
-                <ul class="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b ">
-                    <li>
-                        <a href="#" class="flex px-4 py-3 hover:bg-gray-50">
-                            Web development
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex px-4 py-3 hover:bg-gray-50">
-                            Web Design
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex px-4 py-3 hover:bg-gray-50">
-                            Machine Learning
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="flex md:inline-flex p-4 items-center hover:bg-gray-50">
-                    <span>About us</span>
-                </a>
-            </li>
-        </ul>
-        <div class="ml-auto md:hidden text-gray-500 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+    
+<nav class="bg-white bg-opacity-60 border-gray-200 w-full fixed top-0 rounded-b-2xl">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="shadow-sm rounded-full p-0.5">
+            <h3 class="bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
+                <p class="pt-1">Y</p>
+            </h3>
         </div>
-    </nav>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center border-0 active:border-0 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  ">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-[var(--yellow)] rounded-2xl md:bg-transparent md:text-[var(--yellow)] md:p-0 font-bold text-xl text-shadow-black" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
     <!-- <nav class="flex items-center justify-between bg-[var(--black)] h-20 w-full fixed top-0 rounded-b-3xl px-4">
         <h3 class="bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
             <p class="pt-1">Y</p>

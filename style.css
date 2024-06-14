@@ -1,23 +1,25 @@
 :root{
     --black:rgb(35, 35, 35);
     --yellow: rgb(253 224 71);
+    --gray: rgb(100, 100, 100);
 }
 
 nav h3{
     box-shadow: 3px 3px  0 0.5px var(--yellow);
 }
 
-@media only screen and (min-width: 768px){
-    .parent:hover .child {
-        opacity:1;
-        height:auto;
-        overflow:none;
-        transform: translateY(0);
-    }
-    .child {
-        opacity:0;
-        height:0;
-        overflow:hidden;
-        transform: translateY(-10%);
+.text-shadow-black{
+    text-shadow: 1px 0 var(--gray), -1px 0 var(--gray), 0 1px var(--gray), 0 -1px var(--gray),
+               0.5px 0.5px var(--gray), -0.5px -0.5px var(--gray), 0.5px -0.5px var(--gray), -0.5px 0.5px var(--gray);
+}
+
+.text-shadow-black-hover:hover{
+    text-shadow: 1px 0 var(--gray), -1px 0 var(--gray), 0 1px var(--gray), 0 -1px var(--gray),
+               0.5px 0.5px var(--gray), -0.5px -0.5px var(--gray), 0.5px -0.5px var(--gray), -0.5px 0.5px var(--gray);
+}
+
+@media (max-width: 768px) {
+    .text-shadow-black-hover:hover{
+        text-shadow: none ;
     }
 }
