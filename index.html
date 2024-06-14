@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
-<body class="bg-neutral-200 flex items-center justify-center flex-col w-full h-screen font-mono">
+<body class="bg-[var(--yellow)] flex items-center justify-center flex-col w-full font-mono overflow-y-auto overflow-x-hidden">
 
     
-<nav class="bg-white bg-opacity-60 border-gray-200 w-full fixed top-0 rounded-b-2xl">
+<nav class="bg-white  border-gray-200 w-full sticky top-0 rounded-b-2xl">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div class="shadow-sm rounded-full p-0.5">
             <h3 class="bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
@@ -27,33 +27,42 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  ">
           <li>
-            <a href="#" class="block py-2 px-3 text-white bg-[var(--yellow)] rounded-2xl md:bg-transparent md:text-[var(--yellow)] md:p-0 font-bold text-xl text-shadow-black" aria-current="page">Home</a>
+            <a href="#sobre-mi" class="block py-2 px-3 text-white bg-[var(--yellow)] rounded-2xl md:bg-transparent md:text-[var(--yellow)] md:p-0 font-bold text-xl text-shadow-black" aria-current="page">Sobre mi</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">About</a>
+            <a href="#estidos" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Estudios</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Services</a>
+            <a href="#aptitudes" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Aptitudes</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Pricing</a>
+            <a href="#idiomas" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Idiomas</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Contact</a>
+            <a href="#proyectos" class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Proyectos</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   
-  
-    <!-- <nav class="flex items-center justify-between bg-[var(--black)] h-20 w-full fixed top-0 rounded-b-3xl px-4">
-        <h3 class="bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
-            <p class="pt-1">Y</p>
-        </h3>
-        <div class="flex items-center justify-center">
 
+  <section id="sobre-mi" class="h-[90vh] w-full flex-col md:flex-row py-6 gap-6 flex justify-between sm:px-16 px-5 items-center">
+    <div class="flex flex-col gap-4">
+        <h1 class="text-5xl font-extrabold">Hola,<br>soy Yeray</h1>
+        <h4 class="text-xl font-extrabold text-gray-600">Desarrollador Frontend</h4>
+        <a title="Descargar CV" class="bg-white p-3 w-auto shadow-green-button rounded-2xl text-center flex items-center justify-center font-extrabold text-xl" href="./CurriculumYerayCortesGrande.pdf" download="CurriculumYerayCortesGrande">Descargar CV</a>
+        
+    </div>
+    <div class="flex justify-center items-center gap-5">
+        <img src="foto.jpg" alt="mi-foto" class="min-h-[30rem] max-h-[30rem] w-auto shadow-black-image rounded-xl">
+
+        <div class="h-full flex justify-end flex-col items-center">
+            <a href="https://github.com/y233233" class="min-h-16 max-h-16" target="_blank"><img class="max-h-16 min-h-16" src="github.svg" alt="Github" title="Github"></a>
+            <a href="#" class="min-h-16 max-h-16" target="_blank"><img  src="linkedin.svg" class="min-h-16 max-h-16" alt="LinkedIn" title="LinkedIn"></a>
         </div>
-    </nav> -->
+    </div>
+  </section>
+
 </body>
 </html>
