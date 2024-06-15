@@ -1,12 +1,11 @@
-:root{
-    --black:rgb(35, 35, 35);
-    --yellow: rgb(253 224 71);
-    --gray: rgb(100, 100, 100);
-    --green: #00C6AE;
+
+nav a.y-link{
+    box-shadow: 3px 3px  0 0.5px var(--yellow);
 }
 
-nav h3{
-    box-shadow: 3px 3px  0 0.5px var(--yellow);
+nav a.y-link:hover{
+    transform: translateX(2px) translateY(2px);
+    box-shadow: 1px 1px  0 0.5px var(--yellow);
 }
 
 .text-shadow-black{
@@ -30,6 +29,21 @@ nav h3{
 
 .shadow-black-image{
     box-shadow: 7px 7px  0 0.5px var(--black);
+}
+
+.about-background{
+    position: absolute;
+    height: 1000rem;
+    width: 1000rem;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    content: "";
+    background-image: radial-gradient(
+        ellipse at var(--Xpx-gradient) var(--Ypx-gradient),
+    var(--light-blue) 0%,
+    var(--dark-blue) 0.4% 100%
+  );
 }
 
 
