@@ -31,6 +31,13 @@ nav a.y-link:hover{
     box-shadow: 7px 7px  0 0.5px var(--black);
 }
 
+main{
+    position: fixed;
+    z-index: -20;
+    top: 0;
+    left: 0;
+}
+
 .about-background{
     position: absolute;
     height: 1000rem;
@@ -42,7 +49,7 @@ nav a.y-link:hover{
     background-image: radial-gradient(
         ellipse at var(--Xpx-gradient) var(--Ypx-gradient),
     var(--light-blue) 0%,
-    var(--dark-blue) 0.4% 100%
+    var(--dark-blue) 0.3% 100%
   );
 }
 

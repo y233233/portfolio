@@ -21,6 +21,7 @@
     }
   </style>
   <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body
@@ -46,21 +47,17 @@
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
           <li>
-            <a href="#sobre-mi"
+            <a href="#inicio"
               class="block py-2 px-3 text-white bg-[var(--yellow)] rounded-2xl md:bg-transparent md:text-[var(--yellow)] md:p-0 font-bold text-xl text-shadow-black"
-              aria-current="page">Sobre mi</a>
+              aria-current="page">Inicio</a>
           </li>
           <li>
-            <a href="#estudos"
-              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Estudios</a>
+            <a href="#sobre-mi"
+              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Sobre mi</a>
           </li>
           <li>
             <a href="#aptitudes"
               class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Aptitudes</a>
-          </li>
-          <li>
-            <a href="#idiomas"
-              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Idiomas</a>
           </li>
           <li>
             <a href="#proyectos"
@@ -72,7 +69,7 @@
   </nav>
 
   <section id="sobre-mi"
-    class="h-[140vh] lg:h-[90vh] w-full flex-col md:flex-row py-6 flex justify-center gap-9 sm:px-16 px-5 items-center">
+    class="h-[140vh] lg:h-[90vh] w-3/4 flex-col md:flex-row py-6 flex justify-between  sm:px-16 px-5 items-center">
     <div class="flex flex-col gap-4  lg:gap-5">
       <h1 class="text-3xl md:text-5xl font-extrabold">Hola,<br />soy Yeray</h1>
       <h4 class="text-xl font-extrabold text-gray-600">
@@ -82,16 +79,6 @@
         class="bg-white p-3 max-w-72 w-auto shadow-green-button rounded-2xl text-center flex items-center justify-center font-extrabold text-xl"
         href="./CurriculumYerayCortesGrande.pdf" download="CurriculumYerayCortesGrande">Descargar CV</a>
 
-      <div id="about"
-        class="transition-all max-w-full gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative  p-4 rounded-2xl font-extrabold select-none">
-        <h1 class="text-2xl md:text-3xl text-[var(--yellow)]">Sobre mi</h1>
-        <h3>
-          Hola!!, soy desarrollador web frontend con experiencia en crear interfaces dinámicas y responsivas. Mi
-          portfolio es un reflejo de mi compromiso con la excelencia en diseño y usabilidad, destacando proyectos que
-          combinan funcionalidad y estética.
-        </h3>
-        <div class="about-background"></div>
-      </div>
     </div>
     <div class="flex justify-center items-center gap-5">
       <img src="foto.jpg" alt="mi-foto"
@@ -138,8 +125,17 @@
     </div>
   </section>
 
-  <section id="estudos">
-
+  <section id="sobre-mi">
+    <div id="about"
+        class="transition-all max-w-full gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative  p-4 rounded-2xl font-extrabold select-none">
+        <h1 class="text-2xl md:text-3xl text-[var(--yellow)]">Sobre mi</h1>
+        <h3>
+          Hola!!, soy desarrollador web frontend con experiencia en crear interfaces dinámicas y responsivas. Mi
+          portfolio es un reflejo de mi compromiso con la excelencia en diseño y usabilidad, destacando proyectos que
+          combinan funcionalidad y estética.
+        </h3>
+        <div class="about-background"></div>
+      </div>
   </section>
 
 </body>
