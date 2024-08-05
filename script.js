@@ -1,5 +1,7 @@
 const aboutContainer = document.querySelector("div#about");
 const root = document.querySelector(':root');
+const percentageValue = document.querySelector('#percentage');
+const loadingScreenInput = document.querySelector("#loading-screen");
 
 aboutContainer.addEventListener("mousemove", (event) => {
     root.style.setProperty('--Xpx-gradient', `${event.layerX}px`);
@@ -12,7 +14,15 @@ aboutContainer.addEventListener("mouseleave", () => {
     }, 50)
 });
 
-
+const intervalLoading = setInterval(()=>{
+  if (parseInt(percentageValue.innerText) >= 98){
+    clearInterval(intervalLoading);
+    loadingScreenInput.checked = true;
+    document.body.classList.remove('h-screen');
+    document.body.classList.remove('overflow-y-hidden');
+  }
+  percentageValue.innerText = parseInt(percentageValue.innerText) + 2;
+}, 15 )
 
 let flock;
 
@@ -34,6 +44,7 @@ function draw() {
 
 // Add a new boid into the System
 function mouseClicked() {
+  flock.addBoid(new Boid(mouseX, mouseY));
   flock.addBoid(new Boid(mouseX, mouseY));
 }
 
