@@ -1,12 +1,18 @@
 const aboutContainer = document.querySelector("div#about");
 const root = document.querySelector(':root');
-const percentageValue = document.querySelector('#percentage');
-const loadingScreenInput = document.querySelector("#loading-screen");
+const presentation1Element = document.querySelector("h1#presentation-1");
+const presentation2Element = document.querySelector("h2#presentation-2");
+
+const imageWel = document.getElementById('tilt')
+/* Get the height and width of the element */
+const heightImageWel = imageWel.clientHeight
+const widthImageWel = imageWel.clientWidth
 
 aboutContainer.addEventListener("mousemove", (event) => {
     root.style.setProperty('--Xpx-gradient', `${event.layerX}px`);
     root.style.setProperty('--Ypx-gradient', `${event.layerY}px`);
 });
+
 aboutContainer.addEventListener("mouseleave", () => {
     setTimeout(() => {
         root.style.setProperty('--Xpx-gradient', `${-2220}px`);
@@ -14,17 +20,82 @@ aboutContainer.addEventListener("mouseleave", () => {
     }, 50)
 });
 
-const intervalLoading = setInterval(()=>{
-  if (parseInt(percentageValue.innerText) >= 98){
-    clearInterval(intervalLoading);
-    loadingScreenInput.checked = true;
-    document.body.classList.remove('h-screen');
-    document.body.classList.remove('overflow-y-hidden');
-  }
-  percentageValue.innerText = parseInt(percentageValue.innerText) + 2;
-}, 15 )
-
+/* Store the element in el */
 let flock;
+let presentation1Progress = 0;
+let presentation2Progress = 0;
+
+
+/*
+  * Add a listener for mousemove event
+  * Which will trigger function 'handleMove'
+  * On mousemove
+  */
+imageWel.addEventListener('mousemove', handleMove)
+
+/* Define function a */
+function handleMove(e) {
+  /*
+    * Get position of mouse cursor
+    * With respect to the element
+    * On mouseover
+    */
+  /* Store the x position */
+  const xVal = e.layerX
+  /* Store the y position */
+  const yVal = e.layerY
+  
+  /*
+    * Calculate rotation valuee along the Y-axis
+    * Here the multiplier 20 is to
+    * Control the rotation
+    * You can change the value and see the results
+    */
+  const yRotation = 20 * ((xVal - widthImageWel / 2) / widthImageWel)
+  
+  /* Calculate the rotation along the X-axis */
+  const xRotation = -20 * ((yVal - heightImageWel / 2) / heightImageWel)
+  
+  /* Generate string for CSS transform property */
+  const string = 'perspective(500px) scale(1.04) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+  
+  /* Apply the calculated transformation */
+  imageWel.style.transform = string
+}
+
+/* Add listener for mouseout event, remove the rotation */
+imageWel.addEventListener('mouseout', function() {
+  imageWel.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+// /* Add listener for mousedown event, to simulate click */
+// imageWel.addEventListener('mousedown', function() {
+//   imageWel.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+// })
+
+// /* Add listener for mouseup, simulate release of mouse click */
+// imageWel.addEventListener('mouseup', function() {
+//   imageWel.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+// })
+
+const intervalPresentation1 = setInterval(() => {
+  presentation1Element.innerText = "¡Hola!".substring(0, presentation1Progress);
+  presentation1Progress++;
+  if (presentation1Progress > "¡Hola!".length) {
+    clearInterval(intervalPresentation1)
+    presentation1Element.classList.add("remove-cursor");
+    presentation2Element.classList.add("pb-2");
+  };
+}, 100);
+
+const intervalPresentation2 = setInterval(() => {
+  if (presentation1Progress > "¡Hola!".length){
+    presentation2Element.innerText = "Soy Yeray".substring(0, presentation2Progress);
+    presentation2Progress++;
+    if (presentation2Progress > "Soy Yeray".length) clearInterval(intervalPresentation2);
+  }
+}, 100);
+
 
 function setup() {
   createCanvas(window.screen.width, window.screen.height);

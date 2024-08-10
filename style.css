@@ -49,21 +49,23 @@ main{
     background-image: radial-gradient(
         ellipse at var(--Xpx-gradient) var(--Ypx-gradient),
     var(--light-blue) 0%,
-    var(--dark-blue) 0.3% 100%
+    var(--dark-blue) 0.5% 100%
   );
 }
 
 /* DEMO-SPECIFIC STYLES */
-.typewriter h1 {
+.typewriter h1, .typewriter h2 {
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    letter-spacing: .05em; /* Adjust as needed */
     animation: 
-      typing 3.5s steps(30, end),
       blink-caret .5s step-end infinite;
+  }
+
+  .typewriter .remove-cursor{
+    border-right: 0 !important;
   }
   
   /* The typing effect */
@@ -109,3 +111,20 @@ main{
         text-shadow: none ;
     }
 }
+
+#tilt {
+    display: block;
+    height: 470px;
+    width: 350px;
+    background-color: grey;
+    margin: 0 auto;
+    transition: box-shadow 0.1s, transform 0.1s;
+    
+    /*
+      * Adding image to the background
+      * No relation to the hover effect.
+      */
+    background-image: url(foto.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
