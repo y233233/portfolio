@@ -111,20 +111,3 @@ main{
         text-shadow: none ;
     }
 }
-
-#tilt {
-    display: block;
-    height: 470px;
-    width: 350px;
-    background-color: grey;
-    margin: 0 auto;
-    transition: box-shadow 0.1s, transform 0.1s;
-    
-    /*
-      * Adding image to the background
-      * No relation to the hover effect.
-      */
-    background-image: url(foto.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
