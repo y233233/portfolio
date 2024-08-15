@@ -38,6 +38,11 @@ main{
     left: 0;
 }
 
+.about:hover{
+    box-shadow: 0 0 20px var(--dark-blue);
+    transform: scale(1.03);
+}
+
 .about-background{
     position: absolute;
     height: 1000rem;
