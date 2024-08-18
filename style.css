@@ -31,6 +31,22 @@ nav a.y-link:hover{
     box-shadow: 7px 7px  0 0.5px var(--black);
 }
 
+#aptitudes div.child:nth-child(-n+3) {
+    border-bottom: var(--border-aptitudes);
+  }
+  
+  #aptitudes div.child:nth-child(3n+1) {
+    border-right: var(--border-aptitudes);
+  }
+  
+  #aptitudes div.child:nth-child(3n) {
+    border-left: var(--border-aptitudes);
+  }
+  
+  #aptitudes div.child:nth-child(n+7) {
+    border-top: var(--border-aptitudes);
+  }
+
 main{
     position: fixed;
     z-index: -20;
@@ -115,4 +131,206 @@ main{
     .text-shadow-black-hover:hover{
         text-shadow: none ;
     }
+}
+
+
+.container-carousel {
+    position: relative;
+    width: 200px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg");
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  
+
+  @media (width<1024px) {
+    .carousel__face { 
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+      }
+      
+      .container-carousel {
+        position: relative;
+        width: 150px;
+        margin: 100px auto 0 auto;
+        perspective: 1000px;
+      }
+
+      .carousel__face:nth-child(1) {
+        transform: rotateY(  0deg) translateZ(320px); }
+      .carousel__face:nth-child(2) { 
+          transform: rotateY( 40deg) translateZ(320px); }
+      .carousel__face:nth-child(3) {
+        transform: rotateY( 80deg) translateZ(320px); }
+      .carousel__face:nth-child(4) {
+        transform: rotateY(120deg) translateZ(320px); }
+      .carousel__face:nth-child(5) { 
+       transform: rotateY(160deg) translateZ(320px); }
+      .carousel__face:nth-child(6) { 
+       transform: rotateY(200deg) translateZ(320px); }
+      .carousel__face:nth-child(7) { 
+       transform: rotateY(240deg) translateZ(320px); }
+      .carousel__face:nth-child(8) {
+        transform: rotateY(280deg) translateZ(320px); }
+      .carousel__face:nth-child(9) {
+        transform: rotateY(320deg) translateZ(320px); }
+      
+}
+
+
+@media (width<768px) {
+    .carousel__face { 
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+      }
+      
+      .container-carousel {
+        position: relative;
+        width: 120px;
+        margin: 100px auto 0 auto;
+        perspective: 1000px;
+      }
+
+      .carousel__face:nth-child(1) {
+        transform: rotateY(  0deg) translateZ(230px); }
+      .carousel__face:nth-child(2) { 
+          transform: rotateY( 40deg) translateZ(230px); }
+      .carousel__face:nth-child(3) {
+        transform: rotateY( 80deg) translateZ(230px); }
+      .carousel__face:nth-child(4) {
+        transform: rotateY(120deg) translateZ(230px); }
+      .carousel__face:nth-child(5) { 
+       transform: rotateY(160deg) translateZ(230px); }
+      .carousel__face:nth-child(6) { 
+       transform: rotateY(200deg) translateZ(230px); }
+      .carousel__face:nth-child(7) { 
+       transform: rotateY(240deg) translateZ(230px); }
+      .carousel__face:nth-child(8) {
+        transform: rotateY(280deg) translateZ(230px); }
+      .carousel__face:nth-child(9) {
+        transform: rotateY(320deg) translateZ(230px); }
+      
+}
+
+
+@media (width<600px) {
+    .carousel__face { 
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+      }
+      
+      .container-carousel {
+        position: relative;
+        width: 100px;
+        margin: 100px auto 0 auto;
+        perspective: 500px;
+      }
+
+      .carousel__face:nth-child(1) {
+        transform: rotateY(  0deg) translateZ(150px); }
+      .carousel__face:nth-child(2) { 
+          transform: rotateY( 40deg) translateZ(150px); }
+      .carousel__face:nth-child(3) {
+        transform: rotateY( 80deg) translateZ(150px); }
+      .carousel__face:nth-child(4) {
+        transform: rotateY(120deg) translateZ(150px); }
+      .carousel__face:nth-child(5) { 
+       transform: rotateY(160deg) translateZ(150px); }
+      .carousel__face:nth-child(6) { 
+       transform: rotateY(200deg) translateZ(150px); }
+      .carousel__face:nth-child(7) { 
+       transform: rotateY(240deg) translateZ(150px); }
+      .carousel__face:nth-child(8) {
+        transform: rotateY(280deg) translateZ(150px); }
+      .carousel__face:nth-child(9) {
+        transform: rotateY(320deg) translateZ(150px); }
+      
 }
