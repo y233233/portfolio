@@ -31,19 +31,19 @@ nav a.y-link:hover{
     box-shadow: 7px 7px  0 0.5px var(--black);
 }
 
-#aptitudes div.child:nth-child(-n+3) {
+#aptitudes div.child.relative:nth-child(-n) {
     border-bottom: var(--border-aptitudes);
   }
   
-  #aptitudes div.child:nth-child(3n+1) {
+  #aptitudes div.child.relative:nth-child(2n+1) {
     border-right: var(--border-aptitudes);
   }
   
-  #aptitudes div.child:nth-child(3n) {
+  #aptitudes div.child.relative:nth-child(2n) {
     border-left: var(--border-aptitudes);
   }
   
-  #aptitudes div.child:nth-child(n+7) {
+  #aptitudes div.child.relative:nth-child(n+5) {
     border-top: var(--border-aptitudes);
   }
 
@@ -100,17 +100,6 @@ main{
     from, to { border-color: transparent }
     50% { border-color: orange }
   }
-
-.loading-bar{
-    --loading-progress: 100%;
-    width: var(--loading-progress);
-    animation: animation-loading 1s linear ;
-}
-
-#loading-screen:checked ~ .loading-screen{
-    
-    opacity: 0;
-}
 
 
 @keyframes animation-loading {
@@ -290,6 +279,22 @@ main{
       .carousel__face:nth-child(9) {
         transform: rotateY(320deg) translateZ(230px); }
       
+        #aptitudes div.child:nth-child(-n+2) {
+          border-bottom: var(--border-aptitudes);
+        }
+        
+        #aptitudes div.child:nth-child(2n+1) {
+          border-right: var(--border-aptitudes);
+        }
+        
+        #aptitudes div.child:nth-child(2n) {
+          border-left: var(--border-aptitudes);
+        }
+        
+        #aptitudes div.child:nth-child(n+7) {
+          border-top: var(--border-aptitudes);
+        }
+
 }
 
 

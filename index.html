@@ -13,8 +13,8 @@
       --black: rgb(35, 35, 35);
       --yellow: rgb(253 224 71);
       --gray: rgb(100, 100, 100);
-      --green: #00C6AE;
-      --dark-blue: #106EE8;
+      --green: #00c6ae;
+      --dark-blue: #106ee8;
       --light-blue: #99dfff;
       --Xpx-gradient: -2220px;
       --Ypx-gradient: -2220px;
@@ -23,15 +23,17 @@
     }
   </style>
   <script src="script.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"
+    integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body
-  class="bg-[var(--yellow)] flex items-center justify-center flex-col w-full font-mono overflow-y-auto overflow-x-hidden ">
+  class="bg-[var(--yellow)] flex items-center justify-center flex-col w-full font-mono overflow-y-auto overflow-x-hidden">
   <nav class="transition-all bg-white z-40 border-gray-200 w-full sticky top-0 -translate-y-20 rounded-b-2xl pt-20">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <div class="shadow-sm rounded-full p-0.5">
-        <a href="#inicio" 
+        <a href="#inicio"
           class="y-link transition-all bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
           <p class="pt-1">Y</p>
         </a>
@@ -55,7 +57,8 @@
           </li>
           <li>
             <a href="#sobre-mi"
-              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Sobre mi</a>
+              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Sobre
+              mi</a>
           </li>
           <li>
             <a href="#aptitudes"
@@ -71,11 +74,11 @@
   </nav>
 
   <section id="inicio"
-    class="h-[120vh] lg:h-[90vh] w-full gap-24 md:gap-12 lg:gap-60 xl:gap-80 2xl:gap-[25rem] flex-col md:flex-row py-6 flex justify-center  sm:px-16 px-5 items-center">
-    <div class="flex flex-col gap-4  lg:gap-5 w-72">
-      <div class="typewriter flex flex-col  justify-start items-start sm:h-[7rem] h-[5rem] select-none">
-        <h1 class="text-4xl sm:text-5xl font-extrabold " id="presentation-1"></h1>        
-        <h2 class="text-4xl sm:text-5xl font-extrabold " id="presentation-2"></h2>        
+    class="h-[120vh] lg:h-[90vh] w-full gap-24 md:gap-12 lg:gap-60 xl:gap-80 2xl:gap-[25rem] flex-col md:flex-row py-6 flex justify-center sm:px-16 px-5 items-center">
+    <div class="flex flex-col gap-4 lg:gap-5 w-72">
+      <div class="typewriter flex flex-col justify-start items-start sm:h-[7rem] h-[5rem] select-none">
+        <h1 class="text-4xl sm:text-5xl font-extrabold" id="presentation-1"></h1>
+        <h2 class="text-4xl sm:text-5xl font-extrabold" id="presentation-2"></h2>
       </div>
       <h4 class="text-xl font-extrabold text-gray-600">
         Desarrollador Frontend
@@ -83,16 +86,17 @@
       <a title="Descargar CV"
         class="bg-white p-3 max-w-72 w-auto select-none shadow-green-button rounded-2xl text-center flex items-center justify-center font-extrabold text-xl"
         href="./CVYerayCortesGrande.pdf" download="CVYerayCortesGrande">Descargar CV</a>
-
     </div>
-    <div class="flex justify-center items-center gap-5 ">
+    <div class="flex justify-center items-center gap-5">
       <img id="tilt" alt="mi-foto"
-        class="min-h-[20rem] max-h-[20rem] sm:max-h-[30rem] sm:max-w-[30rem] w-auto shadow-black-image rounded-xl object-cover select-none" src="foto.jpg" draggable="false"/>
+        class="min-h-[20rem] max-h-[20rem] sm:max-h-[30rem] sm:max-w-[30rem] w-auto shadow-black-image rounded-xl object-cover select-none"
+        src="foto.jpg" draggable="false" />
 
       <div class="h-[20rem] sm:h-[30rem] flex justify-end flex-col items-center">
         <a href="https://github.com/y233233" target="_blank">
-          <svg width="60px" height="60px" class="pointer-events-none" viewBox="0 0 20 20" title="Github" alt="Github" version="1.1" draggable="false"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg width="60px" height="60px" class="pointer-events-none" viewBox="0 0 20 20" title="Github" alt="Github"
+            version="1.1" draggable="false" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>Github</title>
             <desc>Created with Sketch.</desc>
             <defs></defs>
@@ -109,8 +113,8 @@
           </svg>
         </a>
         <a href="#" class="min-h-16 max-h-16" target="_blank">
-          <svg class="fill-[var(--black)]" height="60px" width="60px" title="LinkedIn" alt="LinkedIn" version="1.1" draggable="false"
-            id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          <svg class="fill-[var(--black)]" height="60px" width="60px" title="LinkedIn" alt="LinkedIn" version="1.1"
+            draggable="false" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 310 310" xml:space="preserve">
             <title>LinkedIn</title>
             <g id="XMLID_801_">
@@ -126,37 +130,47 @@
           </svg>
         </a>
       </div>
-
     </div>
   </section>
 
-  <section id="sobre-mi"
-  class="h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20">
-  <div class="bg-gray-500 h-80  w-80 rounded-xl"></div>
+  <section id="sobre-mi" class="h-[120vh] lg:h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20">
+    <div class="bg-gray-500 h-80 w-80 rounded-xl"></div>
     <div id="about"
-        class="transition-all max-w-full mx-8 md:mx-0 gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative  p-4 rounded-2xl font-extrabold select-none ">
-        <h1 class="text-2xl md:text-3xl text-[var(--yellow)]">Sobre mi</h1>
-        <h3>
-          Hola!!, soy desarrollador web frontend con experiencia en crear interfaces dinámicas y responsivas. Mi
-          portfolio es un reflejo de mi compromiso con la excelencia en diseño y usabilidad, destacando proyectos que
-          combinan funcionalidad y estética.
-        </h3>
-        <div class="about-background"></div>
-      </div>
+      class="transition-all max-w-full mx-8 md:mx-0 gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative p-4 rounded-2xl font-extrabold ">
+      <h1 class="text-2xl md:text-3xl text-[var(--yellow)]">Sobre mi</h1>
+      <h3 class="text-justify">
+        Hola!!, soy desarrollador web frontend con experiencia en crear
+        interfaces dinámicas y responsivas. Mi portfolio es un reflejo de mi
+        compromiso con la excelencia en diseño y usabilidad, destacando
+        proyectos que combinan funcionalidad y estética.
+      </h3>
+      <div class="about-background"></div>
+    </div>
   </section>
 
-  <section id="aptitudes"
-  class="h-screen w-full grid" style="grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);">
-    <div class="col-span-5 row-span-2 child"></div>
-    <div class="col-span-3 row-span-2 child"></div>
-    <div class="col-span-2 row-span-2 child"></div>
-    <div class="col-span-5 row-span-2 child flex justify-center items-center">
+  <section id="aptitudes" class="h-screen w-full grid text-[var(--black)]" style="
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+      ">
+    <div class="md:col-span-3 md:row-span-3 child col-span-4 row-span-2 relative flex justify-start items-start  p-11 felx-col">
+      <h1 class="text-5xl md:text-6xl">Educación</h1>
+    </div>
+    
+    <div class="col-span-1 row-span-2 child md:absolute md:hidden md:col-span-0 md:row-span-0"></div>
+    <div class="col-span-1 row-span-2 child md:absolute md:hidden md:col-span-0 md:row-span-0"></div>
+    
+    <div class="col-span-4 row-span-2 child md:col-span-2 md:row-span-3 relative border-b-[var(--border-aptitudes)] flex justify-start items-start  p-11 felx-col">
+      <h1 class="text-5xl md:text-6xl">Experiencia</h1>
+    </div>
+
+    <div
+      class="col-span-5 md:row-span-3 relative row-span-2 child flex justify-center flex-col items-center gap-16 md:gap-28 md:pb-28">
+      <h1 class="text-5xl md:text-6xl">Skills</h1>
       <div class="container-carousel -translate-y-40">
         <div class="carousel">
-          <div class="carousel__face " title="TypeScript"></div>
-          <div class="carousel__face " title="JavaScript"></div>
-          <div class="carousel__face " title="Bootstrap"></div>
+          <div class="carousel__face" title="TypeScript"></div>
+          <div class="carousel__face" title="JavaScript"></div>
+          <div class="carousel__face" title="Bootstrap"></div>
           <div class="carousel__face" title="Tailwind_CSS"></div>
           <div class="carousel__face" title="React"></div>
           <div class="carousel__face" title="Node.js"></div>
@@ -168,10 +182,7 @@
     </div>
   </section>
 
-  <section id="proyectos"
-  class="h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20">
-  
-  </section>
+  <section id="proyectos" class="h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20"></section>
 </body>
 
 </html>
