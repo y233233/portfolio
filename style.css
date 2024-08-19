@@ -31,6 +31,12 @@ nav a.y-link:hover{
     box-shadow: 7px 7px  0 0.5px var(--black);
 }
 
+.active-link{
+  color: orange !important;
+  background-color: transparent !important;
+}
+
+
 #aptitudes div.child.relative:nth-child(-n) {
     border-bottom: var(--border-aptitudes);
   }
@@ -119,6 +125,12 @@ main{
 @media (max-width: 768px) {
     .text-shadow-black-hover:hover{
         text-shadow: none ;
+    }
+
+
+    .active-link{
+      color: white !important;
+      background-color: orange !important;
     }
 }
 

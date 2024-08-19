@@ -38,35 +38,35 @@
           <p class="pt-1">Y</p>
         </a>
       </div>
-      <button data-collapse-toggle="navbar-default" type="button"
+      <button data-collapse-toggle="navbar-start" type="button" id="navbar-button"
         class="inline-flex items-center border-0 active:border-0 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-        aria-controls="navbar-default" aria-expanded="false">
+        aria-controls="navbar-start" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M1 1h15M1 7h15M1 13h15" />
         </svg>
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-start">
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
           <li>
             <a href="#inicio"
-              class="block py-2 px-3 text-white bg-[var(--yellow)] rounded-2xl md:bg-transparent md:text-[var(--yellow)] md:p-0 font-bold text-xl text-shadow-black"
+              class="active-link transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center"
               aria-current="page">Inicio</a>
           </li>
           <li>
             <a href="#sobre-mi"
-              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Sobre
+              class="transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center">Sobre
               mi</a>
           </li>
           <li>
             <a href="#aptitudes"
-              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Aptitudes</a>
+              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center">Aptitudes</a>
           </li>
           <li>
             <a href="#proyectos"
-              class="block py-2 px-3 text-gray-900 rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)] text-shadow-black-hover md:text-shadow-none-hover md:p-0 font-bold text-xl">Proyectos</a>
+              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center">Proyectos</a>
           </li>
         </ul>
       </div>
@@ -148,7 +148,7 @@
     </div>
   </section>
 
-  <section id="aptitudes" class="h-screen w-full grid text-[var(--black)]" style="
+  <section id="aptitudes" class="h-screen pt-20 w-full grid text-[var(--black)]" style="
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(6, 1fr);
       ">

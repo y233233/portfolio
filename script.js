@@ -3,6 +3,10 @@ const root = document.querySelector(':root');
 const presentation1Element = document.querySelector("h1#presentation-1");
 const presentation2Element = document.querySelector("h2#presentation-2");
 
+const navLinksEls = document.querySelectorAll("div#navbar-start a");
+const sectionEls = document.querySelectorAll("section");
+const buttonNavBar = document.querySelector("button#navbar-button");
+
 aboutContainer.addEventListener("mousemove", (event) => {
     root.style.setProperty('--Xpx-gradient', `${event.layerX}px`);
     root.style.setProperty('--Ypx-gradient', `${event.layerY}px`);
@@ -19,6 +23,7 @@ aboutContainer.addEventListener("mouseleave", () => {
 let flock;
 let presentation1Progress = 0;
 let presentation2Progress = 0;
+let currentSection = "inicio";
 
 const intervalPresentation1 = setInterval(() => {
   presentation1Element.innerText = "¡Hola!".substring(0, presentation1Progress);
@@ -38,6 +43,26 @@ const intervalPresentation2 = setInterval(() => {
   }
 }, 100);
 
+window.addEventListener("scroll", () =>{
+  sectionEls.forEach(sectionEl => {
+    if (window.scrollY >= (sectionEl.offsetTop - sectionEl.clientHeight / 4)){
+      currentSection = sectionEl.id;
+    }
+  });
+
+  navLinksEls.forEach(navLinkEl => {
+    if (navLinkEl.href.includes(currentSection)){
+      document.querySelector(".active-link").classList.remove("active-link");
+      navLinkEl.classList.add("active-link");
+    }
+  });
+})
+
+navLinksEls.forEach(navLinkEl => {
+  navLinkEl.addEventListener("click", () => {
+    buttonNavBar.click()
+  })
+})
 
 function setup() {
   createCanvas(window.screen.width, window.screen.height);
