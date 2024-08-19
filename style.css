@@ -339,3 +339,40 @@ main{
         transform: rotateY(320deg) translateZ(150px); }
       
 }
+
+.linear-wipe {
+  background: radial-gradient(
+    circle at 100%,
+    var(--black),
+    gray 50%,
+    white 75%,
+    var(--black) 75%
+  );
+  font-weight: 600;
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 1.5s linear infinite;
+}
+@keyframes animatedTextGradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.linear-wipe2 {
+  background: radial-gradient(
+    circle at 100%,
+    var(--black),
+    gray 50%,
+    white 75%,
+    var(--black) 75%
+  );
+  font-weight: 600;
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 1.5s linear infinite reverse 0.1s;
+}

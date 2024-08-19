@@ -19,7 +19,7 @@
       --Xpx-gradient: -2220px;
       --Ypx-gradient: -2220px;
       --loading-progress: 0%;
-      --border-aptitudes: solid 3px white;
+      --border-aptitudes: solid 3px var(--black);
     }
   </style>
   <script src="script.js" defer></script>
@@ -152,20 +152,45 @@
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(6, 1fr);
       ">
-    <div class="md:col-span-3 md:row-span-3 child col-span-4 row-span-2 relative flex justify-start items-start  p-11 felx-col">
-      <h1 class="text-5xl md:text-6xl">Educación</h1>
+    <div class="md:col-span-3 md:row-span-3 child col-span-4 row-span-2 relative flex justify-start items-start  p-5 sm:p-11 flex-col bg-white bg-opacity-40">
+      <h1 class="text-3xl md:text-4xl font-bold">Educación</h1>
+      <div class="flex justify-start items-start w-full h-full ">
+        <div class="w-1/2 h-full flex  justify-center sm:justify-start items-start flex-col py-10">
+          <h4 class="linear-wipe text-sm  lg:text-4xl sm:text-2xl">Grado medio <br>SMR</h4>
+          <p>&emsp;</p>
+            <a class="font-bold sm:text-lg md:text-xl text-xs  " target="_blank" href="https://maps.app.goo.gl/7bYLpgn1mkcFssMw6">&emsp;&emsp;IES Barruecos</a>
+            <h5 class="font-bold sm:text-lg md:text-xl text-xs ">&emsp;&emsp;2020 - 2022</h5>
+        </div>
+        <div class="w-1/2 h-full flex  justify-center sm:justify-end items-start flex-col py-10">
+          
+          <h4 class="linear-wipe2 text-sm lg:text-4xl sm:text-2xl">Grado superior <br>DAW</h4>
+
+          <p>&emsp;</p>
+
+          <a class="font-bold sm:text-lg md:text-xl text-xs " target="_blank" href="https://maps.app.goo.gl/RFidu5b2fASTifsT6">&emsp;&emsp;IES Albarregas</a>
+            <h5 class="font-bold sm:text-lg md:text-xl text-xs ">&emsp;&emsp;2022 - 2024</h5>
+        </div>
+      </div>
     </div>
     
     <div class="col-span-1 row-span-2 child md:absolute md:hidden md:col-span-0 md:row-span-0"></div>
     <div class="col-span-1 row-span-2 child md:absolute md:hidden md:col-span-0 md:row-span-0"></div>
     
-    <div class="col-span-4 row-span-2 child md:col-span-2 md:row-span-3 relative border-b-[var(--border-aptitudes)] flex justify-start items-start  p-11 felx-col">
-      <h1 class="text-5xl md:text-6xl">Experiencia</h1>
+    <div class="col-span-4 row-span-2 child md:col-span-2 md:row-span-3 relative border-b-[var(--border-aptitudes)] flex justify-start items-start  p-5 sm:p-11 flex-col bg-white bg-opacity-40">
+      <h1 class="text-3xl md:text-4xl font-bold">Experiencia</h1>
+      <div class="h-full w-full flex justify-start items-center">
+        <p class="text-justify text-xs md:text-lg sm:text-base">
+          En las prácticas en el grado superior de DAW en Ayesa mi trabajo
+          fue la resolución de incidencias de su cliente, dichas incidencias
+          consistían en sentencias SQL y depurar distintas aplicaciones en
+          JavaScript y .Net para encontrar fallos que el cliente indica
+        </p>
+      </div>
     </div>
 
     <div
       class="col-span-5 md:row-span-3 relative row-span-2 child flex justify-center flex-col items-center gap-16 md:gap-28 md:pb-28">
-      <h1 class="text-5xl md:text-6xl">Skills</h1>
+      <h1 class="text-5xl md:text-6xl font-bold">Skills</h1>
       <div class="container-carousel -translate-y-40">
         <div class="carousel">
           <div class="carousel__face" title="TypeScript"></div>
