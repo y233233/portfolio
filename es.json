@@ -1,0 +1,15 @@
+{
+    "nav1Txt": "Inicio",
+    "nav2Txt": "Sobre mi",
+    "nav3Txt": "Aptitudes",
+    "nav4Txt": "Proyectos",
+    "inicioPhTxt": "Desarrollador Frontend",
+    "DwnCVTxt": "Descargar CV",
+    "sobreMi1Txt": "Sobre mi",
+    "sobreMi2Txt": "Hola!!, soy desarrollador web frontend con experiencia en crear interfaces dinámicas y responsivas. Mi portfolio es un reflejo de mi compromiso con la excelencia en diseño y usabilidad, destacando proyectos que combinan funcionalidad y estética.",
+    "aptitudes1Txt": "Educación",
+    "aptitudes2Txt": "Grado medio<br>SMR",
+    "aptitudes3Txt": "Grado superior<br>DAW",
+    "aptitudes4Txt": "Experiencia",
+    "aptitudes5Txt": "En las prácticas en el grado superior de DAW en Ayesa mi trabajo fue la resolución de incidencias de su cliente, dichas incidencias consistían en sentencias SQL y depurar distintas aplicaciones en JavaScript y .Net para encontrar fallos que el cliente indica"
+}

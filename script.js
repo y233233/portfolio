@@ -1,5 +1,20 @@
+const queryString = window.location.search;
+const navigatorLanguage = navigator.language;
+if (queryString.length === 0) {
+  if (["es", "en"].some((e) => e === navigatorLanguage.substring(0, 2))) {
+    window.location.replace(
+      `${window.location.href}?Id=${navigatorLanguage.substring(0, 2)}`
+    );
+  } else {
+    window.location.replace(`${window.location.href}?Id=es`);
+  }
+}
+
+const languageURL = new URLSearchParams(queryString).get("Id");
+const languageButton = document.querySelector("#languageButton");
+
 const aboutContainer = document.querySelector("div#about");
-const root = document.querySelector(':root');
+const root = document.querySelector(":root");
 const presentation1Element = document.querySelector("h1#presentation-1");
 const presentation2Element = document.querySelector("h2#presentation-2");
 
@@ -7,16 +22,23 @@ const navLinksEls = document.querySelectorAll("div#navbar-start a");
 const sectionEls = document.querySelectorAll("section");
 const buttonNavBar = document.querySelector("button#navbar-button");
 
+if (languageURL === "en") {
+  languageButton.value = "es";
+  const imgButton = languageButton.querySelector("img");
+  imgButton.src = imgButton.src.replace("GB", "ES");
+  imgButton.alt = "Español";
+}
+
 aboutContainer.addEventListener("mousemove", (event) => {
-    root.style.setProperty('--Xpx-gradient', `${event.layerX}px`);
-    root.style.setProperty('--Ypx-gradient', `${event.layerY}px`);
+  root.style.setProperty("--Xpx-gradient", `${event.layerX}px`);
+  root.style.setProperty("--Ypx-gradient", `${event.layerY}px`);
 });
 
 aboutContainer.addEventListener("mouseleave", () => {
-    setTimeout(() => {
-        root.style.setProperty('--Xpx-gradient', `${-2220}px`);
-        root.style.setProperty('--Ypx-gradient', `${-2220}px`);
-    }, 50)
+  setTimeout(() => {
+    root.style.setProperty("--Xpx-gradient", `${-2220}px`);
+    root.style.setProperty("--Ypx-gradient", `${-2220}px`);
+  }, 50);
 });
 
 /* Store the element in el */
@@ -24,45 +46,29 @@ let flock;
 let presentation1Progress = 0;
 let presentation2Progress = 0;
 let currentSection = "inicio";
+let [typedMessage1, typedMessage2] =
+  languageURL === "es" ? ["¡Hola!", "Soy Yeray"] : ["Hi!", "I'm Yeray"];
 
-const intervalPresentation1 = setInterval(() => {
-  presentation1Element.innerText = "¡Hola!".substring(0, presentation1Progress);
-  presentation1Progress++;
-  if (presentation1Progress > "¡Hola!".length) {
-    clearInterval(intervalPresentation1)
-    presentation1Element.classList.add("remove-cursor");
-    presentation2Element.classList.add("pb-2");
-  };
-}, 100);
-
-const intervalPresentation2 = setInterval(() => {
-  if (presentation1Progress > "¡Hola!".length){
-    presentation2Element.innerText = "Soy Yeray".substring(0, presentation2Progress);
-    presentation2Progress++;
-    if (presentation2Progress > "Soy Yeray".length) clearInterval(intervalPresentation2);
-  }
-}, 100);
-
-window.addEventListener("scroll", () =>{
-  sectionEls.forEach(sectionEl => {
-    if (window.scrollY >= (sectionEl.offsetTop - sectionEl.clientHeight / 4)){
+window.addEventListener("scroll", () => {
+  sectionEls.forEach((sectionEl) => {
+    if (window.scrollY >= sectionEl.offsetTop - sectionEl.clientHeight / 3) {
       currentSection = sectionEl.id;
     }
   });
 
-  navLinksEls.forEach(navLinkEl => {
-    if (navLinkEl.href.includes(currentSection)){
+  navLinksEls.forEach((navLinkEl) => {
+    if (navLinkEl.href.includes(currentSection)) {
       document.querySelector(".active-link").classList.remove("active-link");
       navLinkEl.classList.add("active-link");
     }
   });
-})
+});
 
-navLinksEls.forEach(navLinkEl => {
+navLinksEls.forEach((navLinkEl) => {
   navLinkEl.addEventListener("click", () => {
-    buttonNavBar.click()
-  })
-})
+    buttonNavBar.click();
+  });
+});
 
 function setup() {
   createCanvas(window.screen.width, window.screen.height);
@@ -70,7 +76,7 @@ function setup() {
   flock = new Flock();
   // Add an initial set of boids into the system
   for (let i = 0; i < 100; i++) {
-    let b = new Boid(width / 2,height / 2);
+    let b = new Boid(width / 2, height / 2);
     flock.addBoid(b);
   }
 }
@@ -98,15 +104,15 @@ function Flock() {
   this.boids = []; // Initialize the array
 }
 
-Flock.prototype.run = function() {
+Flock.prototype.run = function () {
   for (let i = 0; i < this.boids.length; i++) {
-    this.boids[i].run(this.boids);  // Passing the entire list of boids to each boid individually
+    this.boids[i].run(this.boids); // Passing the entire list of boids to each boid individually
   }
-}
+};
 
-Flock.prototype.addBoid = function(b) {
+Flock.prototype.addBoid = function (b) {
   this.boids.push(b);
-}
+};
 
 // The Nature of Code
 // Daniel Shiffman
@@ -120,27 +126,27 @@ function Boid(x, y) {
   this.velocity = createVector(random(-1, 1), random(-1, 1));
   this.position = createVector(x, y);
   this.r = 4.0;
-  this.maxspeed = 3;    // Maximum speed
+  this.maxspeed = 3; // Maximum speed
   this.maxforce = 0.1; // Maximum steering force
 }
 
-Boid.prototype.run = function(boids) {
+Boid.prototype.run = function (boids) {
   this.flock(boids);
   this.update();
   this.borders();
   this.render();
-}
+};
 
-Boid.prototype.applyForce = function(force) {
+Boid.prototype.applyForce = function (force) {
   // We could add mass here if we want A = F / M
   this.acceleration.add(force);
-}
+};
 
 // We accumulate a new acceleration each time based on three rules
-Boid.prototype.flock = function(boids) {
-  let sep = this.separate(boids);   // Separation
-  let ali = this.align(boids);      // Alignment
-  let coh = this.cohesion(boids);   // Cohesion
+Boid.prototype.flock = function (boids) {
+  let sep = this.separate(boids); // Separation
+  let ali = this.align(boids); // Alignment
+  let coh = this.cohesion(boids); // Cohesion
   // Arbitrarily weight these forces
   sep.mult(1.6);
   ali.mult(1.0);
@@ -149,10 +155,10 @@ Boid.prototype.flock = function(boids) {
   this.applyForce(sep);
   this.applyForce(ali);
   this.applyForce(coh);
-}
+};
 
 // Method to update location
-Boid.prototype.update = function() {
+Boid.prototype.update = function () {
   // Update velocity
   this.velocity.add(this.acceleration);
   // Limit speed
@@ -160,22 +166,22 @@ Boid.prototype.update = function() {
   this.position.add(this.velocity);
   // Reset accelertion to 0 each cycle
   this.acceleration.mult(0);
-}
+};
 
 // A method that calculates and applies a steering force towards a target
 // STEER = DESIRED MINUS VELOCITY
-Boid.prototype.seek = function(target) {
-  let desired = p5.Vector.sub(target,this.position);  // A vector pointing from the location to the target
+Boid.prototype.seek = function (target) {
+  let desired = p5.Vector.sub(target, this.position); // A vector pointing from the location to the target
   // Normalize desired and scale to maximum speed
   desired.normalize();
   desired.mult(this.maxspeed);
   // Steering = Desired minus Velocity
-  let steer = p5.Vector.sub(desired,this.velocity);
-  steer.limit(this.maxforce);  // Limit to maximum steering force
+  let steer = p5.Vector.sub(desired, this.velocity);
+  steer.limit(this.maxforce); // Limit to maximum steering force
   return steer;
-}
+};
 
-Boid.prototype.render = function() {
+Boid.prototype.render = function () {
   // Draw a triangle rotated in the direction of velocity
   let theta = this.velocity.heading() + radians(90);
   fill(55);
@@ -189,33 +195,33 @@ Boid.prototype.render = function() {
   vertex(this.r, this.r * 3);
   endShape(CLOSE);
   pop();
-}
+};
 
 // Wraparound
-Boid.prototype.borders = function() {
-  if (this.position.x < -this.r)  this.position.x = width + this.r;
-  if (this.position.y < -this.r)  this.position.y = height + this.r;
+Boid.prototype.borders = function () {
+  if (this.position.x < -this.r) this.position.x = width + this.r;
+  if (this.position.y < -this.r) this.position.y = height + this.r;
   if (this.position.x > width + this.r) this.position.x = -this.r;
   if (this.position.y > height + this.r) this.position.y = -this.r;
-}
+};
 
 // Separation
 // Method checks for nearby boids and steers away
-Boid.prototype.separate = function(boids) {
+Boid.prototype.separate = function (boids) {
   let desiredseparation = 25.0;
   let steer = createVector(0, 0);
   let count = 0;
   // For every boid in the system, check if it's too close
   for (let i = 0; i < boids.length; i++) {
-    let d = p5.Vector.dist(this.position,boids[i].position);
+    let d = p5.Vector.dist(this.position, boids[i].position);
     // If the distance is greater than 0 and less than an arbitrary amount (0 when you are yourself)
-    if ((d > 0) && (d < desiredseparation)) {
+    if (d > 0 && d < desiredseparation) {
       // Calculate vector pointing away from neighbor
       let diff = p5.Vector.sub(this.position, boids[i].position);
       diff.normalize();
-      diff.div(d);        // Weight by distance
+      diff.div(d); // Weight by distance
       steer.add(diff);
-      count++;            // Keep track of how many
+      count++; // Keep track of how many
     }
   }
   // Average -- divide by how many
@@ -232,17 +238,17 @@ Boid.prototype.separate = function(boids) {
     steer.limit(this.maxforce);
   }
   return steer;
-}
+};
 
 // Alignment
 // For every nearby boid in the system, calculate the average velocity
-Boid.prototype.align = function(boids) {
+Boid.prototype.align = function (boids) {
   let neighbordist = 50;
-  let sum = createVector(0,0);
+  let sum = createVector(0, 0);
   let count = 0;
   for (let i = 0; i < boids.length; i++) {
-    let d = p5.Vector.dist(this.position,boids[i].position);
-    if ((d > 0) && (d < neighbordist)) {
+    let d = p5.Vector.dist(this.position, boids[i].position);
+    if (d > 0 && d < neighbordist) {
       sum.add(boids[i].velocity);
       count++;
     }
@@ -257,27 +263,66 @@ Boid.prototype.align = function(boids) {
   } else {
     return createVector(0, 0);
   }
-}
+};
 
 // Cohesion
 // For the average location (i.e. center) of all nearby boids, calculate steering vector towards that location
-Boid.prototype.cohesion = function(boids) {
+Boid.prototype.cohesion = function (boids) {
   let neighbordist = 50;
-  let sum = createVector(0, 0);   // Start with empty vector to accumulate all locations
+  let sum = createVector(0, 0); // Start with empty vector to accumulate all locations
   let count = 0;
   for (let i = 0; i < boids.length; i++) {
-    let d = p5.Vector.dist(this.position,boids[i].position);
-    if ((d > 0) && (d < neighbordist)) {
+    let d = p5.Vector.dist(this.position, boids[i].position);
+    if (d > 0 && d < neighbordist) {
       sum.add(boids[i].position); // Add location
       count++;
     }
   }
   if (count > 0) {
     sum.div(count);
-    return this.seek(sum);  // Steer towards the location
+    return this.seek(sum); // Steer towards the location
   } else {
     return createVector(0, 0);
   }
-}
+};
 
+fetch(`${languageURL}.json`).then((res) =>
+  res.json().then((data) => {
+    for (let id of Object.keys(data)) {
+      document.querySelector(`#${id}`).innerText = data[id];
+      if (id === "DwnCVTxt") document.querySelector(`#${id}`).title = data[id];
+      if (id === "aptitudes2Txt" || id === "aptitudes3Txt")
+        document.querySelector(`#${id}`).innerHTML = data[id];
+    }
 
+    document.body.classList.replace("overflow-y-hidden", "overflow-y-auto");
+    document
+      .querySelector("div.loader-wrapper")
+      .classList.add("opacity-0", "z-0");
+
+    const intervalPresentation1 = setInterval(() => {
+      presentation1Element.innerText = typedMessage1.substring(
+        0,
+        presentation1Progress
+      );
+      presentation1Progress++;
+      if (presentation1Progress > typedMessage1.length) {
+        clearInterval(intervalPresentation1);
+        presentation1Element.classList.add("remove-cursor");
+        presentation2Element.classList.add("pb-2");
+      }
+    }, 100);
+
+    const intervalPresentation2 = setInterval(() => {
+      if (presentation1Progress > typedMessage1.length) {
+        presentation2Element.innerText = typedMessage2.substring(
+          0,
+          presentation2Progress
+        );
+        presentation2Progress++;
+        if (presentation2Progress > typedMessage2.length)
+          clearInterval(intervalPresentation2);
+      }
+    }, 100);
+  })
+);

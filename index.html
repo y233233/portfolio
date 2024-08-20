@@ -29,14 +29,17 @@
 </head>
 
 <body
-  class="bg-[var(--yellow)] flex items-center justify-center flex-col w-full font-mono overflow-y-auto overflow-x-hidden">
+  class="bg-[var(--yellow)] flex items-center justify-center flex-col w-full font-mono overflow-y-hidden overflow-x-hidden">
   <nav class="transition-all bg-white z-40 border-gray-200 w-full sticky top-0 -translate-y-20 rounded-b-2xl pt-20">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <div class="shadow-sm rounded-full p-0.5">
-        <a href="#inicio"
-          class="y-link transition-all bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
-          <p class="pt-1">Y</p>
-        </a>
+      <div class="flex justify-center items-center gap-5">
+        <div class="shadow-sm rounded-full p-0.5">
+          <a href="#inicio"
+            class="y-link transition-all bg-[var(--yellow)] h-10 w-10 flex items-center text-center justify-center font-mono font-bold text-[var(--black)] text-2xl rounded-full select-none border-2 border-[var(--black)]">
+            <p class="pt-1">Y</p>
+          </a>
+        </div>
+        <form action="." method="get" class="flex justify-center items-center h-10 p-0 m-0"> <button id="languageButton" class="flex justify-center items-center h-10" type="submit" name="Id" value="en"> <img src="https://flagsapi.com/GB/flat/64.png" alt="English" height="40" width="40"></button></form>
       </div>
       <button data-collapse-toggle="navbar-start" type="button" id="navbar-button"
         class="inline-flex items-center border-0 active:border-0 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -53,20 +56,19 @@
           <li>
             <a href="#inicio"
               class="active-link transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center"
-              aria-current="page">Inicio</a>
+              aria-current="page" id="nav1Txt"></a>
           </li>
           <li>
             <a href="#sobre-mi"
-              class="transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center">Sobre
-              mi</a>
+              class="transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center" id="nav2Txt"></a>
           </li>
           <li>
             <a href="#aptitudes"
-              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center">Aptitudes</a>
+              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center" id="nav3Txt"></a>
           </li>
           <li>
             <a href="#proyectos"
-              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center">Proyectos</a>
+              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center" id="nav4Txt"></a>
           </li>
         </ul>
       </div>
@@ -80,12 +82,10 @@
         <h1 class="text-4xl sm:text-5xl font-extrabold" id="presentation-1"></h1>
         <h2 class="text-4xl sm:text-5xl font-extrabold" id="presentation-2"></h2>
       </div>
-      <h4 class="text-xl font-extrabold text-gray-600">
-        Desarrollador Frontend
-      </h4>
-      <a title="Descargar CV"
+      <h4 class="text-xl font-extrabold text-gray-600" id="inicioPhTxt"></h4>
+      <a title="Descargar CV" id="DwnCVTxt"
         class="bg-white p-3 max-w-72 w-auto select-none shadow-green-button rounded-2xl text-center flex items-center justify-center font-extrabold text-xl"
-        href="./CVYerayCortesGrande.pdf" download="CVYerayCortesGrande">Descargar CV</a>
+        href="./CVYerayCortesGrande.pdf" download="CVYerayCortesGrande"></a>
     </div>
     <div class="flex justify-center items-center gap-5">
       <img id="tilt" alt="mi-foto"
@@ -137,13 +137,8 @@
     <div class="bg-gray-500 h-80 w-80 rounded-xl"></div>
     <div id="about"
       class="transition-all max-w-full mx-8 md:mx-0 gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative p-4 rounded-2xl font-extrabold ">
-      <h1 class="text-2xl md:text-3xl text-[var(--yellow)]">Sobre mi</h1>
-      <h3 class="text-justify">
-        Hola!!, soy desarrollador web frontend con experiencia en crear
-        interfaces dinámicas y responsivas. Mi portfolio es un reflejo de mi
-        compromiso con la excelencia en diseño y usabilidad, destacando
-        proyectos que combinan funcionalidad y estética.
-      </h3>
+      <h1 class="text-2xl md:text-3xl text-[var(--yellow)]" id="sobreMi1Txt"></h1>
+      <h3 class="text-justify" id="sobreMi2Txt"></h3>
       <div class="about-background"></div>
     </div>
   </section>
@@ -153,17 +148,17 @@
         grid-template-rows: repeat(6, 1fr);
       ">
     <div class="md:col-span-3 md:row-span-3 child col-span-4 row-span-2 relative flex justify-start items-start  p-5 sm:p-11 flex-col bg-white bg-opacity-40">
-      <h1 class="text-3xl md:text-4xl font-bold">Educación</h1>
+      <h1 class="text-3xl md:text-4xl font-bold" id="aptitudes1Txt"></h1>
       <div class="flex justify-start items-start w-full h-full ">
         <div class="w-1/2 h-full flex  justify-center sm:justify-start items-start flex-col py-10">
-          <h4 class="linear-wipe text-sm  lg:text-4xl sm:text-2xl">Grado medio <br>SMR</h4>
+          <h4 class="linear-wipe text-sm  lg:text-4xl sm:text-2xl" id="aptitudes2Txt"></h4>
           <p>&emsp;</p>
             <a class="font-bold sm:text-lg md:text-xl text-xs  " target="_blank" href="https://maps.app.goo.gl/7bYLpgn1mkcFssMw6">&emsp;&emsp;IES Barruecos</a>
             <h5 class="font-bold sm:text-lg md:text-xl text-xs ">&emsp;&emsp;2020 - 2022</h5>
         </div>
         <div class="w-1/2 h-full flex  justify-center sm:justify-end items-start flex-col py-10">
           
-          <h4 class="linear-wipe2 text-sm lg:text-4xl sm:text-2xl">Grado superior <br>DAW</h4>
+          <h4 class="linear-wipe2 text-sm lg:text-4xl sm:text-2xl" id="aptitudes3Txt"></h4>
 
           <p>&emsp;</p>
 
@@ -177,20 +172,15 @@
     <div class="col-span-1 row-span-2 child md:absolute md:hidden md:col-span-0 md:row-span-0"></div>
     
     <div class="col-span-4 row-span-2 child md:col-span-2 md:row-span-3 relative border-b-[var(--border-aptitudes)] flex justify-start items-start  p-5 sm:p-11 flex-col bg-white bg-opacity-40">
-      <h1 class="text-3xl md:text-4xl font-bold">Experiencia</h1>
+      <h1 class="text-3xl md:text-4xl font-bold" id="aptitudes4Txt"></h1>
       <div class="h-full w-full flex justify-start items-center">
-        <p class="text-justify text-xs md:text-lg sm:text-base">
-          En las prácticas en el grado superior de DAW en Ayesa mi trabajo
-          fue la resolución de incidencias de su cliente, dichas incidencias
-          consistían en sentencias SQL y depurar distintas aplicaciones en
-          JavaScript y .Net para encontrar fallos que el cliente indica
-        </p>
+        <p class="text-justify text-xs md:text-lg sm:text-base" id="aptitudes5Txt"></p>
       </div>
     </div>
 
     <div
       class="col-span-5 md:row-span-3 relative row-span-2 child flex justify-center flex-col items-center gap-16 md:gap-28 md:pb-28">
-      <h1 class="text-5xl md:text-6xl font-bold">Skills</h1>
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold">Skills</h1>
       <div class="container-carousel -translate-y-40">
         <div class="carousel">
           <div class="carousel__face" title="TypeScript"></div>
@@ -207,7 +197,12 @@
     </div>
   </section>
 
-  <section id="proyectos" class="h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20"></section>
+  <section id="proyectos" class="h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20">
+  </section>
+
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
 </body>
 
 </html>
