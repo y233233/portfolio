@@ -20,6 +20,8 @@
       --Ypx-gradient: -2220px;
       --loading-progress: 0%;
       --border-aptitudes: solid 3px var(--black);
+
+      --furniro:#FFF3E3;
     }
   </style>
   <script src="script.js" defer></script>
@@ -76,7 +78,7 @@
   </nav>
 
   <section id="inicio"
-    class="h-[120vh] lg:h-[90vh] w-full gap-24 md:gap-12 lg:gap-60 xl:gap-80 2xl:gap-[25rem] flex-col md:flex-row py-6 flex justify-center sm:px-16 px-5 items-center">
+    class="my-10 w-full gap-24 md:gap-12 lg:gap-60 xl:gap-80 2xl:gap-[25rem] flex-col md:flex-row py-6 flex justify-center sm:px-16 px-5 items-center">
     <div class="flex flex-col gap-4 lg:gap-5 w-72">
       <div class="typewriter flex flex-col justify-start items-start sm:h-[7rem] h-[5rem] select-none">
         <h1 class="text-4xl sm:text-5xl font-extrabold" id="presentation-1"></h1>
@@ -90,7 +92,7 @@
     <div class="flex justify-center items-center gap-5">
       <img id="tilt" alt="mi-foto"
         class="min-h-[20rem] max-h-[20rem] sm:max-h-[30rem] sm:max-w-[30rem] w-auto shadow-black-image rounded-xl object-cover select-none"
-        src="foto.jpg" draggable="false" />
+        src="./public/foto.jpg" draggable="false" />
 
       <div class="h-[20rem] sm:h-[30rem] flex justify-end flex-col items-center">
         <a href="https://github.com/y233233" target="_blank">
@@ -133,7 +135,7 @@
     </div>
   </section>
 
-  <section id="sobre-mi" class="h-[120vh] lg:h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20">
+  <section id="sobre-mi" class="my-10 lg:my-20 flex justify-center items-center flex-col md:flex-row gap-20">
     <div class="bg-gray-500 h-80 w-80 rounded-xl"></div>
     <div id="about"
       class="transition-all max-w-full mx-8 md:mx-0 gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative p-4 rounded-2xl font-extrabold ">
@@ -197,7 +199,59 @@
     </div>
   </section>
 
-  <section id="proyectos" class="h-[90vh] flex justify-center items-center flex-col md:flex-row gap-20">
+  <section id="proyectos" class=" mb-10 flex justify-center items-center flex-col gap-20 w-full px-8">
+    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold" id="proyectos1Txt"></h1>
+  
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 w-full overflow-y-auto max-h-[42rem]">
+      <!-- <a href="#"
+          class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+          <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+          </div>
+
+          <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">VR</span>
+      </a>
+
+      <a href="#"
+          class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+          <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+          </div>
+
+          <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Tech</span>
+      </a> -->
+
+      <!-- image - start -->
+      <a href="https://furniro-nine-orpin.vercel.app"
+      target="_blank"
+      id="furniroLink"
+          class="group relative flex h-48 items-end text-white hover:text-[var(--furniro)] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+          <img src="./public/proyectos/es/furniro.jpg" id="furniroImage" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+          <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+          </div>
+
+          <span class="relative ml-4 mb-3 inline-block text-sm md:ml-5 md:text-2xl transition-all font-bold">Furniro</span>
+      </a>
+      <!-- image - end -->
+
+      <!-- <a href="#"
+          class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+          <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+          </div>
+
+          <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
+      </a> -->
+  </div>
+
   </section>
 
   <div class="loader-wrapper">

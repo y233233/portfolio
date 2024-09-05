@@ -22,6 +22,18 @@ const navLinksEls = document.querySelectorAll("div#navbar-start a");
 const sectionEls = document.querySelectorAll("section");
 const buttonNavBar = document.querySelector("button#navbar-button");
 
+const projects = [
+  {name: "furniro", 
+    link: {
+    en:"https://furniro-nine-orpin.vercel.app/en" , 
+    es: "https://furniro-nine-orpin.vercel.app/es"},
+    image:{
+      en:"./public/proyectos/en/furniro.jpg" , 
+      es: "./public/proyectos/es/furniro.jpg"
+    }
+  }
+]
+
 if (languageURL === "en") {
   languageButton.value = "es";
   const imgButton = languageButton.querySelector("img");
@@ -286,7 +298,7 @@ Boid.prototype.cohesion = function (boids) {
   }
 };
 
-fetch(`${languageURL}.json`).then((res) =>
+fetch(`./dictionaries/${languageURL}.json`).then((res) =>
   res.json().then((data) => {
     for (let id of Object.keys(data)) {
       document.querySelector(`#${id}`).innerText = data[id];
@@ -295,10 +307,22 @@ fetch(`${languageURL}.json`).then((res) =>
         document.querySelector(`#${id}`).innerHTML = data[id];
     }
 
+    projects.forEach(project => {
+      document.querySelector(`#${project.name}Link`).href = project.link[languageURL]
+      document.querySelector(`#${project.name}Image`).src = project.image[languageURL]
+      document.querySelector(`#${project.name}Image`).alt = project.name[languageURL]
+    })
+
     document.body.classList.replace("overflow-y-hidden", "overflow-y-auto");
     document
       .querySelector("div.loader-wrapper")
-      .classList.add("opacity-0", "z-0");
+      .classList.add("opacity-0", );
+
+      setTimeout(() => {
+        document
+          .querySelector("div.loader-wrapper")
+          .classList.add("hidden");
+      }, 400) 
 
     const intervalPresentation1 = setInterval(() => {
       presentation1Element.innerText = typedMessage1.substring(

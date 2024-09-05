@@ -348,8 +348,8 @@ main{
   background: radial-gradient(
     circle at 100%,
     var(--black),
-    gray 50%,
-    white 75%,
+    rgb(84, 84, 84) 50%,
+    rgb(100, 100, 100) 75%,
     var(--black) 75%
   );
   font-weight: 600;
@@ -369,8 +369,8 @@ main{
   background: radial-gradient(
     circle at 100%,
     var(--black),
-    gray 50%,
-    white 75%,
+    rgb(84, 84, 84) 50%,
+    rgb(100, 100, 100) 75%,
     var(--black) 75%
   );
   font-weight: 600;
