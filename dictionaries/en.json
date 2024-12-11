@@ -1,16 +1,22 @@
 {
     "nav1Txt": "Home",
     "nav2Txt": "About me",
-    "nav3Txt": "Competencies",
-    "nav4Txt": "Projects",
+    "nav3Txt": "Education",
+    "nav4Txt": "Skills",
+    "nav5Txt": "Projects",
     "inicioPhTxt": "Frontend developer",
     "DwnCVTxt": "Download CV",
     "sobreMi1Txt": "About me",
     "sobreMi2Txt": "Hi!!, I am a frontend web developer with experience in creating dynamic and responsive interfaces. My portfolio is a reflection of my commitment to excellence in design and usability, highlighting projects that combine functionality and aesthetics.",
-    "aptitudes1Txt": "Education",
-    "aptitudes2Txt": "Intermediate<br>degree",
-    "aptitudes3Txt": "Superior<br>degree",
-    "aptitudes4Txt": "Experience",
-    "aptitudes5Txt": "In the internship at the higher level of DAW at Ayesa, my job was to resolve incidents for the client. These incidents consisted of SQL statements and debugging different applications in JavaScript and .Net to find errors that the client indicated.",
+   
+    "aptitudes1Txt": "Experience & Education",
+    "aptitudesh21Txt": "Experience",
+    "aptitudesh22Txt": "Education",
+    "aptitudes2Txt": "Intermediate degree",
+    "aptitudes3Txt": "Superior degree",
+    "aptitudes4Txt": "Ayesa",
+    "aptitudes5Txt": "Scholar",
+    "aptitudes6Txt": "In the scholarship at the higher level of DAW at Ayesa, my job was to resolve incidents for the client. These incidents consisted of SQL statements and debugging different applications in JavaScript and .Net to find errors that the client indicated.",
+    
     "proyectos1Txt": "Projects"
 }
