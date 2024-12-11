@@ -30,8 +30,8 @@ const projects = [
       es: "https://furniro-nine-orpin.vercel.app/es"
     },
     image: {
-      en: "./public/proyectos/en/furniro.jpg",
-      es: "./public/proyectos/es/furniro.jpg"
+      en: "./public/proyectos/en/furniro.avif",
+      es: "./public/proyectos/es/furniro.avif"
     },
     tec: [
       "React",
@@ -46,8 +46,8 @@ const projects = [
       es: "https://clim-api-yerays-projects-61a4d539.vercel.app/Inicio"
     },
     image: {
-      en: "./public/proyectos/es/clim-api.jpg",
-      es: "./public/proyectos/es/clim-api.jpg"
+      en: "./public/proyectos/es/clim-api.avif",
+      es: "./public/proyectos/es/clim-api.avif"
     },
     tec: [
       "React",
