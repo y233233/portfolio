@@ -102,10 +102,10 @@
     </div>
     <div class="flex justify-center items-center gap-5">
       <img id="tilt" alt="mi-foto"
-        class="min-h-[20rem] max-h-[20rem] sm:max-h-[30rem] sm:max-w-[30rem] w-auto shadow-black-image rounded-xl object-cover select-none"
-        src="./public/foto.jpg" draggable="false" />
+        class="w-64 md:w-72 lg:w-80 xl:w-96 shadow-black-image rounded-xl object-cover select-none"
+        src="./public/foto.webp" draggable="false" />
 
-      <div class="h-[20rem] sm:h-[30rem] flex justify-end flex-col items-center">
+      <div class="h-72 md:h-80  xl:h-96 flex justify-end flex-col items-center">
         <a href="https://github.com/y233233" target="_blank">
           <svg width="60px" height="60px" class="pointer-events-none" viewBox="0 0 20 20" title="Github" alt="Github"
             version="1.1" draggable="false" xmlns="http://www.w3.org/2000/svg"
@@ -146,18 +146,24 @@
     </div>
   </section>
 
-  <section id="sobre-mi" class="pt-20 lg:my-20 flex justify-center items-center flex-col md:flex-row gap-20">
-    <div class="bg-gray-500 h-80 w-80 rounded-xl"></div>
+  <section id="sobre-mi"
+    class="pt-20 lg:my-20 px-3 flex justify-center w-full items-center flex-col  gap-20 max-w-screen-xl ">
     <div id="about"
-      class="hover:cursor-none transition-all max-w-full mx-8 md:mx-0 gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative p-4 rounded-2xl font-extrabold ">
-      <h1 class="text-2xl md:text-3xl text-[var(--yellow)]" id="sobreMi1Txt"></h1>
-      <h3 class="text-justify font-medium" id="sobreMi2Txt"></h3>
+      class="hover:cursor-none justify-center items-center gap-4 transition-all max-w-full mx-8 md:mx-0 md:flex-row flex-col flex  w-full about text-xl md:text-2xl overflow-hidden relative p-4 py-10 rounded-lg font-extrabold ">
+      <div class="bg-gray-500  rounded-xl  md:w-1/2 w-full">
+        <img alt="sobre-mi"
+        class="rounded-lg object-cover "
+        src="./public/sobre-mi.png" draggable="false" />
+      </div>
+      <div class="md:w-1/2 w-full">
+        <h1 class="text-2xl md:text-3xl text-[var(--yellow)]" id="sobreMi1Txt"></h1>
+        <h3 class="text-justify font-medium" id="sobreMi2Txt"></h3>
+      </div>
       <div class="about-background"></div>
     </div>
   </section>
 
   <section class="pt-20  w-full" id="educacion-experiencia">
-
     <div class="px-4 py-10 bg-orange-400 w-full">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-12" id="aptitudes1Txt"></h2>
@@ -248,7 +254,7 @@
 
 
     <div class="grid md:grid-cols-2  gap-8 text-white items-center justify-center" id="projects-grid">
-      
+
     </div>
 
   </section>
