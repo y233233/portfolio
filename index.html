@@ -21,7 +21,7 @@
       --loading-progress: 0%;
       --border-aptitudes: solid 3px var(--black);
 
-      --furniro:#FFF3E3;
+      --furniro: #FFF3E3;
     }
   </style>
   <script src="script.js" defer></script>
@@ -31,7 +31,7 @@
 </head>
 
 <body
-  class="bg-[var(--yellow)] flex items-center justify-center flex-col w-full font-mono overflow-y-hidden overflow-x-hidden">
+  class="text-[var(--black)] bg-[var(--yellow)] flex items-center justify-center flex-col w-full montserrat overflow-y-hidden overflow-x-hidden">
   <nav class="transition-all bg-white z-40 border-gray-200 w-full sticky top-0 -translate-y-20 rounded-b-2xl pt-20">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <div class="flex justify-center items-center gap-5">
@@ -41,7 +41,10 @@
             <p class="pt-1">Y</p>
           </a>
         </div>
-        <form action="." method="get" class="flex justify-center items-center h-10 p-0 m-0"> <button id="languageButton" class="flex justify-center items-center h-10" type="submit" name="Id" value="en"> <img src="https://flagsapi.com/GB/flat/64.png" alt="English" height="40" width="40"></button></form>
+        <form action="." method="get" class="flex justify-center items-center h-10 p-0 m-0"> <button id="languageButton"
+            class="flex justify-center items-center h-10" type="submit" name="Id" value="en"> <img
+              src="https://flagsapi.com/GB/flat/64.png" alt="English" height="40" width="40"
+              class="rounded-3xl"></button></form>
       </div>
       <button data-collapse-toggle="navbar-start" type="button" id="navbar-button"
         class="inline-flex items-center border-0 active:border-0 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -62,15 +65,23 @@
           </li>
           <li>
             <a href="#sobre-mi"
-              class="transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center" id="nav2Txt"></a>
+              class="transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center"
+              id="nav2Txt"></a>
           </li>
           <li>
-            <a href="#aptitudes"
-              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center" id="nav3Txt"></a>
+            <a href="#educacion-experiencia"
+              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center"
+              id="nav3Txt"></a>
+          </li>
+          <li>
+            <a href="#skills"
+              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center"
+              id="nav4Txt"></a>
           </li>
           <li>
             <a href="#proyectos"
-              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center" id="nav4Txt"></a>
+              class=" transition-all block py-2 px-3 text-[var(--black)] rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[var(--yellow)]  md:p-0 font-bold text-xl text-center"
+              id="nav5Txt"></a>
           </li>
         </ul>
       </div>
@@ -78,7 +89,7 @@
   </nav>
 
   <section id="inicio"
-    class="my-10 w-full gap-24 md:gap-12 lg:gap-60 xl:gap-80 2xl:gap-[25rem] flex-col md:flex-row py-6 flex justify-center sm:px-16 px-5 items-center">
+    class="pt-20 w-full gap-24 md:gap-12 lg:gap-60 xl:gap-80 2xl:gap-[25rem] font-mono flex-col md:flex-row py-6 flex justify-center sm:px-16 px-5 items-center">
     <div class="flex flex-col gap-4 lg:gap-5 w-72">
       <div class="typewriter flex flex-col justify-start items-start sm:h-[7rem] h-[5rem] select-none">
         <h1 class="text-4xl sm:text-5xl font-extrabold" id="presentation-1"></h1>
@@ -91,10 +102,10 @@
     </div>
     <div class="flex justify-center items-center gap-5">
       <img id="tilt" alt="mi-foto"
-        class="min-h-[20rem] max-h-[20rem] sm:max-h-[30rem] sm:max-w-[30rem] w-auto shadow-black-image rounded-xl object-cover select-none"
-        src="./public/foto.jpg" draggable="false" />
+        class="w-64 md:w-72 lg:w-80 xl:w-96 shadow-black-image rounded-xl object-cover select-none"
+        src="./public/foto.webp" draggable="false" />
 
-      <div class="h-[20rem] sm:h-[30rem] flex justify-end flex-col items-center">
+      <div class="h-72 md:h-80  xl:h-96 flex justify-end flex-col items-center">
         <a href="https://github.com/y233233" target="_blank">
           <svg width="60px" height="60px" class="pointer-events-none" viewBox="0 0 20 20" title="Github" alt="Github"
             version="1.1" draggable="false" xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +125,7 @@
             </g>
           </svg>
         </a>
-        <a href="#" class="min-h-16 max-h-16" target="_blank">
+        <a href="https://www.linkedin.com/in/yeray-cortes-grande-b35469313/" class="min-h-16 max-h-16" target="_blank">
           <svg class="fill-[var(--black)]" height="60px" width="60px" title="LinkedIn" alt="LinkedIn" version="1.1"
             draggable="false" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 310 310" xml:space="preserve">
@@ -135,54 +146,93 @@
     </div>
   </section>
 
-  <section id="sobre-mi" class="my-10 lg:my-20 flex justify-center items-center flex-col md:flex-row gap-20">
-    <div class="bg-gray-500 h-80 w-80 rounded-xl"></div>
+  <section id="sobre-mi"
+    class="pt-20 lg:my-20 px-3 flex justify-center w-full items-center flex-col  gap-20 max-w-screen-xl ">
     <div id="about"
-      class="transition-all max-w-full mx-8 md:mx-0 gap-1 flex flex-col md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[45rem] 2xl:max-w-[60rem] about text-xl md:text-2xl overflow-hidden relative p-4 rounded-2xl font-extrabold ">
-      <h1 class="text-2xl md:text-3xl text-[var(--yellow)]" id="sobreMi1Txt"></h1>
-      <h3 class="text-justify" id="sobreMi2Txt"></h3>
+      class="hover:cursor-none justify-center items-center gap-4 transition-all max-w-full mx-8 md:mx-0 md:flex-row flex-col flex  w-full about text-xl md:text-2xl overflow-hidden relative p-4 py-10 rounded-lg font-extrabold ">
+      <div class="bg-gray-500  rounded-xl  md:w-1/2 w-full">
+        <img alt="sobre-mi"
+        class="rounded-lg object-cover "
+        src="./public/sobre-mi.png" draggable="false" />
+      </div>
+      <div class="md:w-1/2 w-full">
+        <h1 class="text-2xl md:text-3xl text-[var(--yellow)]" id="sobreMi1Txt"></h1>
+        <h3 class="text-justify font-medium" id="sobreMi2Txt"></h3>
+      </div>
       <div class="about-background"></div>
     </div>
   </section>
 
-  <section id="aptitudes" class="h-screen pt-20 w-full grid text-[var(--black)]" style="
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-      ">
-    <div class="md:col-span-3 md:row-span-3 child col-span-4 row-span-2 relative flex justify-start items-start  p-5 sm:p-11 flex-col bg-white bg-opacity-40">
-      <h1 class="text-3xl md:text-4xl font-bold" id="aptitudes1Txt"></h1>
-      <div class="flex justify-start items-start w-full h-full ">
-        <div class="w-1/2 h-full flex  justify-center sm:justify-start items-start flex-col py-10">
-          <h4 class="linear-wipe text-sm  lg:text-4xl sm:text-2xl" id="aptitudes2Txt"></h4>
-          <p>&emsp;</p>
-            <a class="font-bold sm:text-lg md:text-xl text-xs  " target="_blank" href="https://maps.app.goo.gl/7bYLpgn1mkcFssMw6">&emsp;&emsp;IES Barruecos</a>
-            <h5 class="font-bold sm:text-lg md:text-xl text-xs ">&emsp;&emsp;2020 - 2022</h5>
-        </div>
-        <div class="w-1/2 h-full flex  justify-center sm:justify-end items-start flex-col py-10">
-          
-          <h4 class="linear-wipe2 text-sm lg:text-4xl sm:text-2xl" id="aptitudes3Txt"></h4>
+  <section class="pt-20  w-full" id="educacion-experiencia">
+    <div class="px-4 py-10 bg-orange-400 w-full">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12" id="aptitudes1Txt"></h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <div class="text-2xl font-semibold mb-6 flex items-center flex-row">
 
-          <p>&emsp;</p>
-
-          <a class="font-bold sm:text-lg md:text-xl text-xs " target="_blank" href="https://maps.app.goo.gl/RFidu5b2fASTifsT6">&emsp;&emsp;IES Albarregas</a>
-            <h5 class="font-bold sm:text-lg md:text-xl text-xs ">&emsp;&emsp;2022 - 2024</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-briefcase mr-2">
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+              </svg>
+              <h3 id="aptitudesh21Txt" class="text-2xl font-semibold"></h3>
+            </div>
+            <div class="rounded-lg border text-card-foreground shadow-sm mb-6 bg-white" data-v0-t="card">
+              <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="font-semibold tracking-tight text-xl" id="aptitudes4Txt"></h3>
+              </div>
+              <div class="p-6 pt-0">
+                <h4 class="font-semibold mb-2" id="aptitudes5Txt"></h4>
+                <p class="text-gray-600" id="aptitudes6Txt"></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="text-2xl font-semibold mb-6 flex items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap mr-2">
+                <path
+                  d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                </path>
+                <path d="M22 10v6"></path>
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+              </svg>
+              <h3 id="aptitudesh22Txt" class="text-2xl font-semibold"></h3>
+            </div>
+            <div class="rounded-lg border text-card-foreground shadow-sm mb-6 bg-white" data-v0-t="card">
+              <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="font-semibold tracking-tight text-xl" id="aptitudes2Txt"></h3>
+              </div>
+              <div class="p-6 pt-0">
+                <h4 class="font-semibold mb-2">
+                  <a class=" " target="_blank" href="https://maps.app.goo.gl/7bYLpgn1mkcFssMw6">IES Barruecos</a>
+                </h4>
+                <p class="text-gray-600">2020 - 2022</p>
+              </div>
+            </div>
+            <div class="rounded-lg border text-card-foreground shadow-sm mb-6 bg-white" data-v0-t="card">
+              <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="font-semibold tracking-tight text-xl" id="aptitudes3Txt"></h3>
+              </div>
+              <div class="p-6 pt-0">
+                <h4 class="font-semibold mb-2"><a class="" target="_blank"
+                    href="https://maps.app.goo.gl/RFidu5b2fASTifsT6">IES Albarregas</a></h4>
+                <p class="text-gray-600">2022 - 2024</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="col-span-1 row-span-2 child md:absolute md:hidden md:col-span-0 md:row-span-0"></div>
-    <div class="col-span-1 row-span-2 child md:absolute md:hidden md:col-span-0 md:row-span-0"></div>
-    
-    <div class="col-span-4 row-span-2 child md:col-span-2 md:row-span-3 relative border-b-[var(--border-aptitudes)] flex justify-start items-start  p-5 sm:p-11 flex-col bg-white bg-opacity-40">
-      <h1 class="text-3xl md:text-4xl font-bold" id="aptitudes4Txt"></h1>
-      <div class="h-full w-full flex justify-start items-center">
-        <p class="text-justify text-xs md:text-lg sm:text-base" id="aptitudes5Txt"></p>
-      </div>
-    </div>
+  </section>
 
+
+  <section id="skills" class="pt-20 w-full flex justify-center items-center ">
     <div
       class="col-span-5 md:row-span-3 relative row-span-2 child flex justify-center flex-col items-center gap-16 md:gap-28 md:pb-28">
-      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold">Skills</h1>
+      <h1 class="text-3xl font-bold text-center">Skills</h1>
       <div class="container-carousel -translate-y-40">
         <div class="carousel">
           <div class="carousel__face" title="TypeScript"></div>
@@ -199,60 +249,43 @@
     </div>
   </section>
 
-  <section id="proyectos" class=" mb-10 flex justify-center items-center flex-col gap-20 w-full px-8">
-    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold" id="proyectos1Txt"></h1>
-  
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 w-full overflow-y-auto max-h-[42rem]">
-      <!-- <a href="#"
-          class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+  <section id="proyectos" class="pt-20 flex justify-center items-center flex-col gap-20 w-full px-8">
+    <h1 class="text-3xl font-bold text-center" id="proyectos1Txt"></h1>
 
-          <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-          </div>
 
-          <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">VR</span>
-      </a>
+    <div class="grid md:grid-cols-2  gap-8 text-white items-center justify-center" id="projects-grid">
 
-      <a href="#"
-          class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-          <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-          </div>
-
-          <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Tech</span>
-      </a> -->
-
-      <!-- image - start -->
-      <a href="https://furniro-nine-orpin.vercel.app"
-      target="_blank"
-      id="furniroLink"
-          class="group relative flex h-48 items-end text-white hover:text-[var(--furniro)] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-          <img src="./public/proyectos/es/furniro.jpg" id="furniroImage" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-          <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-          </div>
-
-          <span class="relative ml-4 mb-3 inline-block text-sm md:ml-5 md:text-2xl transition-all font-bold">Furniro</span>
-      </a>
-      <!-- image - end -->
-
-      <!-- <a href="#"
-          class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-          <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-          </div>
-
-          <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
-      </a> -->
-  </div>
+    </div>
 
   </section>
+  <footer class="px-4 py-20 mt-20 bg-green-400 w-full ">
+    <div class="max-w-5xl mx-auto text-center flex flex-col justify-center items-center gap-4">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <div class="w-8 h-8 bg-[var(--black)] rounded-full flex items-center justify-center text-white">Y</div>
+        <h3 class="text-xl font-semibold">Yeray Cortés</h3>
+      </div>
+      <div class="flex justify-center gap-4 mb-6">
+
+        <a href="https://github.com/y233233" target="_blank" class="text-[var(--black)] hover:text-black/80"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-github w-6 h-6">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+            </path>
+            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+          </svg></a><a href="https://www.linkedin.com/in/yeray-cortes-grande-b35469313/" target="_blank"
+          class="text-[var(--black)] hover:text-black/80"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-linkedin w-6 h-6">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect width="4" height="12" x="2" y="9"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg></a>
+      </div>
+
+    </div>
+  </footer>
 
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>

@@ -23,14 +23,38 @@ const sectionEls = document.querySelectorAll("section");
 const buttonNavBar = document.querySelector("button#navbar-button");
 
 const projects = [
-  {name: "furniro", 
+  {
+    name: "Furniro",
     link: {
-    en:"https://furniro-nine-orpin.vercel.app/en" , 
-    es: "https://furniro-nine-orpin.vercel.app/es"},
-    image:{
-      en:"./public/proyectos/en/furniro.jpg" , 
-      es: "./public/proyectos/es/furniro.jpg"
-    }
+      en: "https://furniro-nine-orpin.vercel.app/en",
+      es: "https://furniro-nine-orpin.vercel.app/es"
+    },
+    image: {
+      en: "./public/proyectos/en/furniro.avif",
+      es: "./public/proyectos/es/furniro.avif"
+    },
+    tec: [
+      "React",
+      "Next.js",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    name: "Clim-api",
+    link: {
+      en: "https://clim-api-yerays-projects-61a4d539.vercel.app/Inicio",
+      es: "https://clim-api-yerays-projects-61a4d539.vercel.app/Inicio"
+    },
+    image: {
+      en: "./public/proyectos/es/clim-api.avif",
+      es: "./public/proyectos/es/clim-api.avif"
+    },
+    tec: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "API"
+    ]
   }
 ]
 
@@ -303,26 +327,93 @@ fetch(`./dictionaries/${languageURL}.json`).then((res) =>
     for (let id of Object.keys(data)) {
       document.querySelector(`#${id}`).innerText = data[id];
       if (id === "DwnCVTxt") document.querySelector(`#${id}`).title = data[id];
-      if (id === "aptitudes2Txt" || id === "aptitudes3Txt")
-        document.querySelector(`#${id}`).innerHTML = data[id];
+
     }
 
     projects.forEach(project => {
-      document.querySelector(`#${project.name}Link`).href = project.link[languageURL]
-      document.querySelector(`#${project.name}Image`).src = project.image[languageURL]
-      document.querySelector(`#${project.name}Image`).alt = project.name[languageURL]
+
+      const projectDiv = document.createElement('div');
+      projectDiv.className = "rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden relative";
+
+      const titleDiv = document.createElement('div');
+      titleDiv.className = "flex flex-col space-y-1.5 p-4 absolute top-0 left-0 right-0 bg-black/50 z-10";
+      const title = document.createElement('h3');
+      title.className = "text-2xl font-semibold leading-none tracking-tight text-white";
+      title.textContent = project.name; 
+      titleDiv.appendChild(title);
+
+      const img = document.createElement('img');
+      img.alt = project.name;
+      img.loading = "lazy";
+      img.width = 300;
+      img.height = 200;
+      img.className = "w-full h-64 object-cover";
+      img.src = project.image[languageURL]; 
+
+      const footerDiv = document.createElement('div');
+      footerDiv.className = "p-4 absolute bottom-0 left-0 right-0 flex justify-between items-end bg-gradient-to-t from-black/70 to-transparent";
+
+      const techDiv = document.createElement('div');
+      techDiv.className = "flex flex-wrap gap-2";
+      project.tec.forEach(tech => {
+        const badge = document.createElement('div');
+        badge.className = "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-white/20 text-white hover:bg-black/80";
+        badge.textContent = tech; 
+        techDiv.appendChild(badge);
+      });
+
+      footerDiv.appendChild(techDiv);
+
+      const link = document.createElement('a');
+      link.href = project.link[languageURL]; 
+      link.target = "_blank";
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+      svg.setAttribute("width", "24");
+      svg.setAttribute("height", "24");
+      svg.setAttribute("viewBox", "0 0 24 24");
+      svg.setAttribute("fill", "none");
+      svg.setAttribute("stroke", "currentColor");
+      svg.setAttribute("stroke-width", "2");
+      svg.setAttribute("stroke-linecap", "round");
+      svg.setAttribute("stroke-linejoin", "round");
+      svg.className = "lucide lucide-globe w-6 h-6 text-white";
+
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", "12");
+      circle.setAttribute("cy", "12");
+      circle.setAttribute("r", "10");
+
+      const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path1.setAttribute("d", "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20");
+
+      const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path2.setAttribute("d", "M2 12h20");
+
+      svg.appendChild(circle);
+      svg.appendChild(path1);
+      svg.appendChild(path2);
+      link.appendChild(svg);
+
+      footerDiv.appendChild(link);
+
+      projectDiv.appendChild(titleDiv);
+      projectDiv.appendChild(img);
+      projectDiv.appendChild(footerDiv);
+
+      document.querySelector("#projects-grid").appendChild(projectDiv);
     })
 
     document.body.classList.replace("overflow-y-hidden", "overflow-y-auto");
     document
       .querySelector("div.loader-wrapper")
-      .classList.add("opacity-0", );
+      .classList.add("opacity-0",);
 
-      setTimeout(() => {
-        document
-          .querySelector("div.loader-wrapper")
-          .classList.add("hidden");
-      }, 400) 
+    setTimeout(() => {
+      document
+        .querySelector("div.loader-wrapper")
+        .classList.add("hidden");
+    }, 400)
 
     const intervalPresentation1 = setInterval(() => {
       presentation1Element.innerText = typedMessage1.substring(
