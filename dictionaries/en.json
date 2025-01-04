@@ -12,11 +12,11 @@
     "aptitudes1Txt": "Experience & Education",
     "aptitudesh21Txt": "Experience",
     "aptitudesh22Txt": "Education",
-    "aptitudes2Txt": "Intermediate degree",
-    "aptitudes3Txt": "Superior degree",
+    "aptitudes2Txt": "Vocational training SMR",
+    "aptitudes3Txt": "Vocational training in web development",
     "aptitudes4Txt": "Ayesa",
-    "aptitudes5Txt": "Scholar",
-    "aptitudes6Txt": "In the scholarship at the higher level of DAW at Ayesa, my job was to resolve incidents for the client. These incidents consisted of SQL statements and debugging different applications in JavaScript and .Net to find errors that the client indicated.",
+    "aptitudes5Txt": "Intern",
+    "aptitudes6Txt": "• Diagnosis and resolution of incidents in databases and websites.\n\n• Modifying and maintaining aspects of client websites using JavaScript and .NET.\n\n• Collaboration with the team to ensure the quality of the solutions delivered.",
     
     "proyectos1Txt": "Projects"
 }

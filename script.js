@@ -326,7 +326,11 @@ fetch(`./dictionaries/${languageURL}.json`).then((res) =>
   res.json().then((data) => {
     for (let id of Object.keys(data)) {
       document.querySelector(`#${id}`).innerText = data[id];
-      if (id === "DwnCVTxt") document.querySelector(`#${id}`).title = data[id];
+      if (id === "DwnCVTxt") {
+        const CVDownloadButton = document.querySelector(`#${id}`);
+        CVDownloadButton.title = data[id];
+        CVDownloadButton.href = `./public/CV/${languageURL}/CVYerayCortesGrande.pdf`;
+      }
 
     }
 
